@@ -44,7 +44,7 @@ public class TitleScene : Scene
     public override void Render()
     {
         Console.SetCursorPosition(5, 1);
-        GameManager.GameName.Print(ConsoleColor.DarkYellow)
+        GameManager.GameName.Print(ConsoleColor.DarkYellow);
 
         _titleMenu.Render(8, 5);
     }

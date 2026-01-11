@@ -9,7 +9,7 @@ public class MenuList
 
     public MenuList(params (string, Action)[] menuTexts)
     {
-        if (menuTexts == 0)
+        if (menuTexts.Length == 0)
         {
             _menus = new List<(string, Action)>();
         }
@@ -27,7 +27,7 @@ public class MenuList
                 _maxLength = textWidth;
             }
         }
-        _outLine = new Ractangle(width: _maxLength + 4, _menus.Count + 2);
+        _outLine = new Ractangle(width: _maxLength + 4, height: _menus.Count + 2);
     }
 
     public void Reset()
@@ -75,7 +75,7 @@ public class MenuList
         if (_maxLength != max) _maxLength = max;
         
         _outLine.Width = _maxLength + 6;
-        _outLine.Heigth--;
+        _outLine.Height--;
     }
 
     public void SelectUp()

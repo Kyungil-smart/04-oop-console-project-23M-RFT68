@@ -8,7 +8,7 @@ public class StageScene : Scene
     
     public StageScene(PlayerCharacter player) => Init(player);
     
-    public void Init(PlayCharactter player)
+    public void Init(PlayerCharacter player)
     {
         _player = player;
 

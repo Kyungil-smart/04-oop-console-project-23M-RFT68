@@ -10,9 +10,13 @@ public static class InputManager
         ConsoleKey.A,
         ConsoleKey.S,
         ConsoleKey.D,
-        ConsoleKey.E,
         ConsoleKey.Spacebar,
-        ConsoleKey.Escape
+        ConsoleKey.Escape,
+        ConsoleKey.Tab,
+        ConsoleKey.LeftArrow,
+        ConsoleKey.RightArrow,
+        ConsoleKey.UpArrow,
+        ConsoleKey.DownArrow
     };
 
     public static bool GetKey(ConsoleKey input)

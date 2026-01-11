@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Diagnostics;
 
 public class GameManager
 {
     public static bool IsGameOver { get; set; }
-    public const string GameName = "";
-    private PlayerCharacter _Player;
+    public const string GameName = "UnLucky of Issac";
+    public const string DeveloperName = "고병희";
+    public const string SupporterName = "김재성 강사님 & 최영민 강사님";
+    private PlayerCharacter _player;
     
-    Public void Run()
+    public void Run()
     {
         Init();
 
@@ -29,13 +32,17 @@ public class GameManager
     private void Init()
     {
         IsGameOver = false;
-        SceneManager.OnChangeScene 
+        SceneManager.OnChangeScene += InputManager.ResetKey;
+        _player = new PlayerCharacter();
         
+        SceneManager.AddScene("Title", new TitleScene());
+        SceneManager.AddScene("Story", new StoryScene());
+        SceneManager.AddScene("Town", new StageScene(_player));
+        SceneManager.AddScene("Log", new LogScene());
+        SceneManager.AddScene("Credit", new CreditScene());
         
+        SceneManager.Chanege("Title");
+
+        Debug.Log("게임 데이터 초기화 완료");
     }
-
-
-
-
-
 }
