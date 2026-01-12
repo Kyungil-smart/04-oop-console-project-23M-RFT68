@@ -37,7 +37,7 @@ public class TitleScene : Scene
 
         if (InputManager.GetKey(ConsoleKey.Enter))
         {
-            _titleMenu.SelectDown();
+            _titleMenu.Select();
         }
     }
 
@@ -60,11 +60,11 @@ public class TitleScene : Scene
 
     public void GameStart()
     {
-        SceneManager.Change("Stage");
+        SceneManager.Change("stage");
     }
 
     public void ViewCredits()
     {
-        SceneManager.Chanege("Credit");
+        SceneManager.Change("Credit");
     }
 }

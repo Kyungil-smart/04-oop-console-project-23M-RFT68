@@ -21,7 +21,7 @@ public class SceneManager
     }
 
     // 상태를 바꾸는 기능
-    public static void Chanege(string key)
+    public static void Change(string key)
     {
         if (!_scenes.ContainsKey(key)) return;
         

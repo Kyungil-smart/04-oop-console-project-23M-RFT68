@@ -5,6 +5,7 @@ public class GameManager
 {
     public static bool IsGameOver { get; set; }
     public const string GameName = "UnLucky of Issac";
+    public const string GameCredit = "Credit";
     public const string DeveloperName = "고병희";
     public const string SupporterName = "김재성 강사님 & 최영민 강사님";
     private PlayerCharacter _player;
@@ -41,7 +42,7 @@ public class GameManager
         SceneManager.AddScene("Log", new LogScene());
         SceneManager.AddScene("Credit", new CreditScene());
         
-        SceneManager.Chanege("Title");
+        SceneManager.Change("Title");
 
         Debug.Log("게임 데이터 초기화 완료");
     }

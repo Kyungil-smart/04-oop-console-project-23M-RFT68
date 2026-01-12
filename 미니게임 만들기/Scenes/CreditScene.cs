@@ -10,14 +10,14 @@
     public void Init()
     {
         _credit = new CreditList();
-        _credit.Add("도움을 주신분 : ");
-        _credit.Add("만든이 : ");
-        _credit.Add("뒤로",);
+        _credit.Add($"도움을 주신분 : ({GameManager.SupporterName})", Supporter);
+        _credit.Add($"만든이 : ({GameManager.DeveloperName})" , Developer);
+        _credit.Add("뒤로", GoToTitle);
     }
 
     public override void Enter()
     {
-        _titleMenu.Reset();
+        _credit.Reset();
     }
 
     public override void Update()
@@ -41,12 +41,25 @@
     public override void Render()
     {
         Console.SetCursorPosition(5, 1);
-        GameManager.
+        GameManager.GameCredit.Print(ConsoleColor.DarkCyan);
         
+        _credit.Render(8, 5);
     }
 
+    public override void Exit()
+    {
+    }
 
+    private void Supporter()
+    {
+    }
 
+    private void Developer()
+    {
+    }
 
-
+    public void GoToTitle()
+    {
+        SceneManager.Change("TitleScene");
+    }
 }

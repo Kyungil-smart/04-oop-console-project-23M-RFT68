@@ -4,10 +4,10 @@
     
     private void Init()
     {
-        Symbol = 'I';
+        Symbol = 'H';
     }
     
-    public override void Use()
+    public override void Use()  // override가 재정의를 못하고 있음
     {
         Owner.Heal(1);
         

@@ -15,7 +15,7 @@
         if(_items.Count >= 10) return;
         
         _items.Add(item);
-        _itemMenu.Add(item.Name, item.Use);
+        _itemMenu.Add(item.Name, item.Use); // use 안됨
         item.Inventory = this;
         item.Owner =  _owner;
     }
