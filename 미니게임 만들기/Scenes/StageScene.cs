@@ -5,6 +5,8 @@ public class StageScene : Scene
 {
     private Tile[,] _field = new Tile[9, 15];
     private PlayerCharacter _player;
+    private Bullet _bullet;
+    private Monster _monster;
     
     public StageScene(PlayerCharacter player) => Init(player);
     
@@ -27,6 +29,7 @@ public class StageScene : Scene
         _player.Field =  _field;
         _player.Position = new Vector(4, 7);
         _field[_player.Position.Y, _player.Position.X].OnTileObject = _player;
+        //_field[_player.Position.Y, _player.Position.X].OnTileObject = _bullet;
         
         // 원래는 수업때 포션 두셨는데 이걸 이용해서 맵 만들고 코인이랑 폭탄 둘 생각
         Debug.Log("스테이지 씬 진입");
@@ -35,6 +38,8 @@ public class StageScene : Scene
     public override void Update()
     {
         _player.Update();
+        _bullet.Update();
+        _monster.Update();
     }
 
     public override void Render()
@@ -57,7 +62,7 @@ public class StageScene : Scene
             {
                 _field[y, x].Print();
             }
-            Console.WriteLine("W");
+            Console.WriteLine("");
         }
     }
 }

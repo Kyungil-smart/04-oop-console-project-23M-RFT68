@@ -38,7 +38,7 @@ public class GameManager
         
         SceneManager.AddScene("Title", new TitleScene());
         SceneManager.AddScene("Story", new StoryScene());
-        SceneManager.AddScene("Town", new StageScene(_player));
+        SceneManager.AddScene("Stage", new StageScene(_player));
         SceneManager.AddScene("Log", new LogScene());
         SceneManager.AddScene("Credit", new CreditScene());
         

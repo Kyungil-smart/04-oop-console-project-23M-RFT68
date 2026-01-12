@@ -60,12 +60,11 @@ public class Bullet : GameObject
 
     public void BulletHit(int value)
     {
-        Monster.Health.Value -= value;
+        // Monster.Health --;
     }
 
-
-
-
-
-
+    private void RemoveBullet()
+    {
+        Field[Position.Y, Position.X].OnTileObject = null;
+    }
 }

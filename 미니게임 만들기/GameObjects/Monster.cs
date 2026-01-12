@@ -35,7 +35,11 @@ public class Monster : GameObject
         Monster.Remove(this);
     }
 
-
+    private void Move(Vector direction)
+    {
+        if (Field == null || !IsActiveControl) return;
+        
+        Vector 
 
 
 }
