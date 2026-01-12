@@ -3,7 +3,7 @@ using System.Numerics;
 
 public class StageScene : Scene
 {
-    private Tile[,] _field = new Tile[7, 13];
+    private Tile[,] _field = new Tile[9, 15];
     private PlayerCharacter _player;
     
     public StageScene(PlayerCharacter player) => Init(player);

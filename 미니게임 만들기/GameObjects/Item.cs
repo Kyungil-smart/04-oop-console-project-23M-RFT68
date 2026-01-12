@@ -12,4 +12,9 @@ public abstract class Item : GameObject
     public void PrintInfo()
     {
     }
+
+    public virtual void Use()
+    {
+    }
+
 }

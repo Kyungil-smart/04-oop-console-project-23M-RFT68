@@ -9,6 +9,7 @@
     
     public override void Use()  // override가 재정의를 못하고 있음
     {
+        base.Use();
         Owner.Heal(1);
         
         Inventory.Remove(this);
@@ -29,3 +30,7 @@
         player.AddItem(this);
     }
 }
+
+// virtual 상속
+// abstract 추상클래스가 의미하는게 무엇인지
+// Interface 까지 연계 해서 복습

@@ -47,7 +47,7 @@ public class PlayerCharacter : GameObject
             Move(Vector.Right);
         }
 
-        if (InputManager.GetKey(ConsoleKey.Tab))
+        if (InputManager.GetKey(ConsoleKey.E))
         {
             HandleControl();
         }
