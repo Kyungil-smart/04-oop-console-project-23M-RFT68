@@ -39,8 +39,8 @@ public class Bullet : GameObject
     {
         if (Field == null) return;
         
-        Vector current = Position;
-        Vector nextPos = Position + direction;
+        BulletVector current = bPosition;
+        BulletVector nextPos = bPosition + direction;
 
         GameObject nextTileObject = Field[nextPos.Y, nextPos.X].OnTileObject;
 
@@ -54,7 +54,7 @@ public class Bullet : GameObject
 
         Field[Position.Y, Position.X].OnTileObject = null;
         Field[nextPos.Y, nextPos.X].OnTileObject = this;
-        Position = nextPos;
+        bPosition = nextPos;
     }
 
 
