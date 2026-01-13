@@ -2,4 +2,6 @@
 {
     public char Symbol { get; set; }
     public Vector Position { get; set; }
+    
+    public BulletVector bPosition { get; set; }
 }

@@ -27,11 +27,17 @@ public class StageScene : Scene
     public override void Enter()
     {
         _player.Field =  _field;
+        // _monster.Field = _field;
         _player.Position = new Vector(4, 7);
+        // _monster.Position = new Vector(1, 1);
         _field[_player.Position.Y, _player.Position.X].OnTileObject = _player;
+        // _field[_monster.Position.Y, _monster.Position.X].OnTileObject = _monster;
         //_field[_player.Position.Y, _player.Position.X].OnTileObject = _bullet;
         
-        // 원래는 수업때 포션 두셨는데 이걸 이용해서 맵 만들고 코인이랑 폭탄 둘 생각
+        _field[3,5].OnTileObject = new Potion() {Name = "Potion"};
+        _field[2,10].OnTileObject =  new Potion() {Name = "Potion"};
+        
+        
         Debug.Log("스테이지 씬 진입");
     }
 

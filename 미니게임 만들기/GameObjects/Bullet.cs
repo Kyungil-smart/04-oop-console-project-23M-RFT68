@@ -57,14 +57,5 @@ public class Bullet : GameObject
         bPosition = nextPos;
     }
 
-
-    public void BulletHit(int value)
-    {
-        // Monster.Health --;
-    }
-
-    private void RemoveBullet()
-    {
-        Field[Position.Y, Position.X].OnTileObject = null;
-    }
+    
 }

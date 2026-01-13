@@ -29,7 +29,7 @@
     public void Render()
     {
         if(!IsActive) return;
-        _itemMenu.Render(15, 1);
+        _itemMenu.Render(25, 5);
     }
     
     public void Select()

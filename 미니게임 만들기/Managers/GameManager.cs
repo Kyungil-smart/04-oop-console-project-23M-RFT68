@@ -9,6 +9,7 @@ public class GameManager
     public const string DeveloperName = "고병희";
     public const string SupporterName = "김재성 강사님 & 최영민 강사님";
     private PlayerCharacter _player;
+    // private Monster _monster;
     
     public void Run()
     {

@@ -108,7 +108,7 @@ public class MenuList
             if (i == _currentIndex)
             {
                 "->".Print(ConsoleColor.White);
-                _menus[i].text.Print(ConsoleColor.White);
+                _menus[i].text.Print(ConsoleColor.Yellow);
                 continue;
             }
             else

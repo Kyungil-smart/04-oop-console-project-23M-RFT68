@@ -106,7 +106,7 @@
             if (i == _currentIndex)
             {
                 "->".Print(ConsoleColor.White);
-                _credits[i].text.Print(ConsoleColor.White);
+                _credits[i].text.Print(ConsoleColor.Yellow);
                 continue;
             }
             else
